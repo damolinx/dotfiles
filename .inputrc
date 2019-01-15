@@ -1,0 +1,2 @@
+# Bind ESC ESC sequence to clear line
+"\e\e":kill-whole-line
