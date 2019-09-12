@@ -20,6 +20,7 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias cls='echo ${green}Run:${reset} clear && clear'
 alias dir='echo ${green}Run:${reset} ls && ls'
 alias md='echo ${green}Run:${reset} mkdir && mkdir'
+alias move='echo ${green}Run:${reset} mv && mv'
 alias rd='echo ${green}Run:${reset} rmdir && rmdir'
 alias start='echo ${green}Run:${reset} open -a Finder ... &&  open -a Finder ${1:./}'
 alias findstr='function f() { path=${3:-./}; echo ${green}Run:${reset} grep -r --include="$2" $1 "$path"; grep -r --include="$2" $1 "$path"; }; f'
