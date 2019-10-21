@@ -24,3 +24,7 @@ alias move='echo ${green}Run:${reset} mv && mv'
 alias rd='echo ${green}Run:${reset} rmdir && rmdir'
 alias start='echo ${green}Run:${reset} open -a Finder ... &&  open -a Finder ${1:./}'
 alias findstr='function f() { path=${3:-./}; echo ${green}Run:${reset} grep -r --include="$2" $1 "$path"; grep -r --include="$2" $1 "$path"; }; f'
+alias ipconfig='echo ${green}Run:${reset}ifconfig && ifconfig'
+
+# Git
+alias g_clean_branches='(git rev-parse --is-inside-work-tree > /dev/null 2>&1) && ((git branch --merged | grep -v -e "master" -e "\*" | xargs -n 1 git branch -d); echo "Done.") || echo "Not a git directory"'
