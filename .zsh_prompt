@@ -1,0 +1,19 @@
+
+setopt PROMPT_SUBST
+
+prompt_git() {
+  git symbolic-ref --quiet --short HEAD 2> /dev/null || echo '<<no-branch>>'
+}
+
+# Set the terminal title to the current working directory.
+PS1=$'\n';
+PS1+='%F{033}%n%f'; # username
+PS1+='%F{255} at %f';
+PS1+='%F{037}%m%f'; # host
+PS1+='%F{255} in %f';
+PS1+='%F{106}%~%f'; # working directory
+PS1+='%F{255} on %f'; # Git repository details
+PS1+='%F{062}$(prompt_git "A" )%f';
+PS1+=$'\n%F{246}%B$%b %f%';
+
+export PS1;
